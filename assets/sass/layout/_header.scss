@@ -1,0 +1,43 @@
+.header {
+    height: 70px;
+    background-color: $color-main;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    .container {
+        height: 100%;
+
+    }
+
+    &__nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__nav-list-left, &__nav-list-right {
+        display: flex;
+
+    }
+    &__nav-list-left-item, &__nav-list-right-item {
+        padding: 0 20px 0 20px;
+        display: flex;
+        align-items: center;
+
+    }
+    &__nav-list-left-link, &__nav-list-right-link {
+        
+        @include nav-link;
+    }
+    @include nav-link-effect;
+
+
+    &__nav-logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}

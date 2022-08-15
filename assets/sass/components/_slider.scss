@@ -1,0 +1,45 @@
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    &__item {
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        transition: all 1.5s ease;
+    }
+
+    &__item_active {
+        opacity: 1;
+    }
+
+    img {
+        object-fit: cover;
+        height: 100vh;
+    }
+
+    &__button-prev, &__button-next {
+        display: block;
+        position: absolute;
+        border: none; 
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        height: 100%;
+        width: 100px;
+        transition: all .3s ease;
+
+    }
+    &__button-prev {
+        transform: rotate(180deg);
+
+    }
+    &__button-next {
+        right: 0%;
+    }
+    &__button-prev:hover, &__button-next:hover {
+        background-color:rgba(0, 0, 0, 0.3);
+    }
+    
+}

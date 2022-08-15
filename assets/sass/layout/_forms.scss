@@ -1,0 +1,141 @@
+.auth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    z-index: 5;
+
+    &__left {
+        width: 440px;
+        background: url('/assets/images/auth/auth.jpg') center/cover no-repeat;
+    }
+
+    &__right {
+        background-color: $color-main;
+        padding: 40px 70px 45px 70px;
+        width: 550px;
+
+        display: flex;
+        flex-direction: column;
+
+        &-close {
+            position: absolute;
+            left: 95%;
+            top: 2.5%;
+            cursor: pointer;
+        }
+
+        &-title {
+            font-family: 'PlayfairDisplay';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            letter-spacing: 0.13em;
+            color: #FFFFFF;
+        }
+        &-subtitle {
+            margin-top: 10px;
+            font-family: 'Raleway';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            color: #FFFFFF;
+        }
+        
+        &-form {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            &-label {
+                margin: 15px 0 5px 0;
+                font-family: 'Raleway';
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: left;
+                letter-spacing: 0.13em;
+                color: #FFFFFF;
+
+                &-forgot {
+                    font-family: 'Raleway';
+                    font-weight: 100;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    color: rgba(255, 255, 255, 0.7);
+                    float: right;
+                    cursor: pointer;
+    
+                    color: rgba(255, 255, 255, 0.7);
+
+                    &:hover {
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+            &-input {
+                margin-bottom: 15px;
+                color: #FFF;
+                @include input;
+                
+            }
+            &-hidden {
+                margin-top: 15px;
+                
+                &_disabled {
+                    display: none;
+                    
+                }
+                &_active {
+                    display: block;
+                    
+                }
+
+            }
+
+            svg {
+                display: block;
+                margin: 15px auto 15px auto;
+            }
+
+
+            &-question {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+
+                div {
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.05em;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+                span {
+                    margin-left: 5px;
+                    font-family: 'Raleway';
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration-line: underline;
+                    }
+                }
+
+            }
+        }
+    }
+}
